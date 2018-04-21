@@ -6,6 +6,7 @@
     <meta name="renderer" content="webkit"/><!-- 让360浏览器默认选择webkit内核 -->
 
     <!-- 全局css -->
+    <link href="${ctxPath}/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/base.css">
 
     <link rel="shortcut icon" href="${ctxPath}/static/favicon.ico">
@@ -44,6 +45,7 @@
     <script src="${ctxPath}/static/js/common/web-upload-object.js"></script>
     <script src="${ctxPath}/static/js/common/ztree-object.js"></script>
     <script src="${ctxPath}/static/js/common/Feng.js"></script>
+    <script src="${ctxPath}/static/js/test.js"></script>
 
 
     <script type="text/javascript">
@@ -57,6 +59,8 @@
     ${layoutContent}
 </div>
 <script src="${ctxPath}/static/js/content.js?v=1.0.0"></script>
+<script src="${ctxPath}/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -69,61 +73,25 @@
             //console.log(str);
             var audio = new Audio('/static/material/所有有拼音/'+str);
             audio.play();
-        })
+        });
+
     })
 
-    //<!--
-    /*
-    function onWordClick() {
-    return false;
-    }
 
+</script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/minified/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+<!-- custom scrollbars plugin -->
 
-    var SS = FP('/flash/mp3_player.swf', 27, 27)
-    xid('id_player_wrapper').innerHTML = SS
-    var aa = document.getElementsByTagName('button')
-    for (var i=0, L=aa.length; i<L; i++)
-    {
-    var bb = aa[i]
-    if (bb.className == 'css_audio_btn')
-      {
-      bb.onclick = function()
-        {
-        var aa = this.parentNode.getElementsByTagName('span')
-        if (aa.length > 0)
-          {
-          aa[2].innerHTML = 1;
-          var URL = spf('\/mp3\/pinyin\/~.mp3', [aa[1].innerHTML] )
-          var SS = FP('/flash/mp3_player.swf?theFile=' + encodeURIComponent(URL) + '&autoplay=yes&loopMe=no', 27, 27)
-          xid('id_player_wrapper').innerHTML = SS
-
-          }
-        }
-      bb.onmouseover = function()
-        {
-        this.style.color = '#cc3300'
-        this.style.backgroundColor = '#ffffff'
-        }
-      bb.onmouseout = function()
-        {
-          var aa = this.parentNode.getElementsByTagName('span')
-          if (aa.length > 0)
-          {
-            if(aa[2].innerHTML == "1"){
-              this.style.color = '#cc3300'
-              this.style.backgroundColor = '#ffffff'
-           }else{
-              this.style.color = '#ffffff'
-              this.style.backgroundColor = '#cc3300'
-          }
-          }
-
-        }
-      }
-     }
-     */
-
-    //-->
+<script>
+    (function($){
+        $(window).load(function(){
+            $("#content_1").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true
+                }
+            });
+        });
+    })(jQuery);
 </script>
 </body>
 </html>

@@ -7,6 +7,6 @@ public class HSKDaoTest {
     @Test
     public void testHSKDao(){
         HSKDao hskDao = new HSKDao();
-        System.out.print(hskDao.getHskList(1).get(1).getWord());
+        System.out.print(hskDao.getHSKList(1).get(1).getWord());
     }
 }

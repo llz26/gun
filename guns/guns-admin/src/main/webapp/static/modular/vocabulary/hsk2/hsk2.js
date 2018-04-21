@@ -14,15 +14,12 @@ var Hsk2 = {
 Hsk2.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-        {title: 'NUM', field: 'id', visible: true, align: 'center', valign: 'middle'},
-        {title: 'NAME', field: 'name', visible: true, align: 'center', valign: 'middle'},
-        {title: 'Pinyin', field: 'pinyin', visible: true, align: 'center', valign: 'middle'},
-        {title: 'English', field: 'english', visible: true, align: 'center', valign: 'middle'},
-        {title: 'MP3', field: 'address', visible: true, align: 'center', valign: 'middle'},
-        {title: 'sentence', field: 'sentence', visible: true, align: 'center', valign: 'middle'},
-        {title: 'Pinyin', field: 'ps', visible: true, align: 'center', valign: 'middle'},
-        {title: 'English', field: 'es', visible: true, align: 'center', valign: 'middle'},
-        {title: 'MP3', field: 'saddress', visible: true, align: 'center', valign: 'middle'}
+            {title: '', field: 'id', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'level', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'word', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'pronunciation', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'definition', visible: true, align: 'center', valign: 'middle'},
+            {title: '', field: 'mp3', visible: true, align: 'center', valign: 'middle',name:"mp3"}
     ];
 };
 

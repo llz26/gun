@@ -13,6 +13,7 @@
     <property name="hibernate.current_session_context_class">thread</property>
 
     <mapping class="com.stylefeng.guns.modular.vocabulary.Domain.HSK"/>
+    <mapping class="com.stylefeng.guns.modular.sentence.Domain.Sentence"/>
     <!--<mapping class="alex.domain.ShopCar"/>
     <mapping class="alex.domain.Product"/>-->
   </session-factory>

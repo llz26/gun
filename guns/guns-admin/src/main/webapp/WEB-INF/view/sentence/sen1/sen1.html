@@ -37,7 +37,7 @@
                                         <th width="10%">
 
                                         </th>
-                                        <th width="10%" style="text-align: center; vertical-align: middle; " data-field="word">
+                                        <th width="10%" style="text-align: center; vertical-align: middle; " data-field="sentence">
                                             Word
                                         </th>
                                         <th width="10%" style="text-align: center; vertical-align: middle; " data-field="pronunciation">
@@ -57,20 +57,20 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @DIRECTIVE DYNAMIC hskList;
-                                    @for(hsk in hskList){
+                                    @DIRECTIVE DYNAMIC sentenceList;
+                                    @for(sentence in sentenceList){
                                     <tr>
                                         <td class="bs-checkbox " style="width: 36px; " data-field="selectItem">
                                             <input data-index="0" name="btSelectItem" type="radio">
                                         </td>
                                         <td style="text-align: center; vertical-align: middle; " data-field="word">
-                                            ${hsk.word}
+                                            ${sentence.sentence}
                                         </td>
                                         <td style="text-align: center; vertical-align: middle; " data-field="pronunciation">
-                                            ${hsk.pronunciation}
+                                            ${sentence.pronunciation}
                                         </td>
                                         <td style="text-align: center; vertical-align: middle; " data-field="definition">
-                                            ${hsk.definition}
+                                            ${sentence.definition}
                                         </td>
                                         <td style="text-align: center; vertical-align: middle; " data-field="mp3">
 
@@ -78,17 +78,15 @@
                                                     <span class="css_btn_lbl">►</span>
                                                     <span class="css_data1">0</span>
                                                     <span class="css_data2">
-                                                        <script type="text/javascript">pinyinflash('${hsk.mp3}');</script>
+                                                        <script type="text/javascript">pinyinflash('${sentence.mp3}');</script>
                                                     </span>
                                                 </button>
 
 
                                         </td>
-
                                         <td style="text-align: center; vertical-align: middle; ">
-                                           <a href="/hsk1/delete/${hsk.id}">删除</a>
+                                           <a href="">删除</a>
                                         </td>
-
                                     </tr>
                                     @}
                                     </tbody>

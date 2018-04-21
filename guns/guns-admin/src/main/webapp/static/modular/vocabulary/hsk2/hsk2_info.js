@@ -46,14 +46,11 @@ Hsk2InfoDlg.close = function() {
 Hsk2InfoDlg.collectData = function() {
     this
     .set('id')
-    .set('name')
-    .set('pinyin')
-    .set('English')
-    .set('address')
-    .set('sentence')
-    .set('ps')
-    .set('es')
-    .set('saddress');
+    .set('level')
+    .set('word')
+    .set('pronunciation')
+    .set('definition')
+    .set('mp3');
 }
 
 /**

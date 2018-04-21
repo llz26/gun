@@ -2,32 +2,27 @@
 <div class="ibox float-e-margins">
     <div class="ibox-content">
         <div class="form-horizontal">
-
-            <input type="hidden" id="id" value="">
-
+            <form action="/hsk1_add" method="post">
             <div class="row">
                 <div class="col-sm-6 b-r">
-                            <#input id="id" name="" underline="true"/>
-                            <#input id="name" name="" underline="true"/>
-                            <#input id="pinyin" name="" underline="true"/>
-                            <#input id="English" name="" underline="true"/>
-                            <#input id="address" name=""/>
+                    <input id="id" name="id" />
+                    <input id="level" name="level"/>
+                    <input id="word" name="word"/>
                 </div>
 
                 <div class="col-sm-6">
-                            <#input id="sentence" name="" underline="true"/>
-                            <#input id="ps" name="" underline="true"/>
-                            <#input id="es" name="" underline="true"/>
-                            <#input id="saddress" name="" underline="true"/>
+                    <input id="pronunciation" name="pronunciation" />
+                    <input id="definition" name="definition" />
+                    <input id="mp3" name="mp3" />
                 </div>
             </div>
 
             <div class="row btn-group-m-t">
                 <div class="col-sm-10">
-                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="Hsk1InfoDlg.addSubmit()"/>
-                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="Hsk1InfoDlg.close()"/>
+                    <input type="submit" value="提交">
                 </div>
             </div>
+            </form>
         </div>
 
     </div>

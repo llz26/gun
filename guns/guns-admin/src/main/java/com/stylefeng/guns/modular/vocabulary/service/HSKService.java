@@ -15,5 +15,7 @@ public class HSKService {
     public void setHskDao(HSKDao hskDao) {
         this.hskDao = hskDao;
     }
-    public List<HSK> getHskList(int level){return hskDao.getHskList(level);}
+    public List<HSK> getHSKList(int level){return hskDao.getHSKList(level);}
+    public boolean deleteHSKById(int id){return hskDao.deleteHSKById(id);}
+    public boolean insertHSK(HSK hsk){return hskDao.insertHSK(hsk);}
 }
